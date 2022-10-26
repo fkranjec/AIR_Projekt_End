@@ -1,0 +1,22 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('AIR');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+
+db.users.drop();
+db.lobbys.drop();
+// Insert a few documents into the sales collection.
+db.users.insertMany([
+    {_id:"user1", lobbies: [], contract: "contract1"},
+    {_id: "user2", lobbies: [], contract: "contract2"}
+])
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+db.users.findOne({_id: "user1"})
